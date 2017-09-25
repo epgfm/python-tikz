@@ -1,22 +1,3 @@
-% Mobile ad-hoc network
-% Author: Dr. Ludger Humbert
-% Source: https://haspe.homeip.net/projekte/ddi/browser/tex/pgf2
-\documentclass{standalone}
-
-\usepackage{tikz}
-\usepackage{pgf}
-
-\usepackage{xxcolor}
-
-\usetikzlibrary{arrows,shadows,petri}
-%                              wg. tokens
-\newlength{\imagewidth}
-\newlength{\imagescale}
-
-\listfiles
-
-\begin{document}
-
 \begin{tikzpicture}[
     knoten/.style={
       shading=ball,
@@ -46,11 +27,7 @@
 
   \path[every node/.style={anchor=south,auto=false}]
 
-        (knoten0) edge  node[] {$1$} (knoten1)
-
-        (knoten2) edge  node[] {$6$} (knoten3)
-        (knoten3) edge  node[] {$2$} (knoten5)
-        (knoten5) edge  node[] {$3$} (knoten4)
+        {{ nodeslist }}
 
 
    ;
@@ -59,4 +36,4 @@
 
 \end{tikzpicture}
 
-\end{document}
+

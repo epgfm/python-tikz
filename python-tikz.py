@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-
+from __future__ import absolute_import
 import os, glob, shutil, string, pickle, gzip
 
 
@@ -15,11 +15,11 @@ if __name__ == "__main__":
 
 
     env = Environment(
-        loader=PackageLoader('yourapplication', 'templates'),
-        autoescape=select_autoescape(['html', 'xml'])
+        loader=PackageLoader('python-tikz', 'templates'),
+        autoescape=select_autoescape(['tex'])
     )
 
 
-    template = env.get_template('mytemplate.html')
+    template = env.get_template('graph_tikzpicture_template.tex')
 
-    print template.render(the='variables', go='here')
+    print template.render(nodeslist='pouet')
